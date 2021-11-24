@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 const HamburgerMenu = (props) => {
   return (
     <Menu {...props}>
+      <Link to="/home" style={{ paddingLeft: '5px' }}>
+        Home
+      </Link>
       <Link to="/times" style={{ paddingLeft: '5px' }}>
         Asistencia
       </Link>
