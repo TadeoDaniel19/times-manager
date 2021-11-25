@@ -10,10 +10,10 @@ const theme = createTheme({
       fourth: colors.fourth,
     },
     primary: {
-      main: colors.primary,
+      main: "#F99D07",
     },
     secondary: {
-      main: colors.secondary,
+      main: "#35D461",
     },
   },
   typography: {

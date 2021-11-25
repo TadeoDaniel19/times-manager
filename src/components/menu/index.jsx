@@ -11,9 +11,16 @@ const HamburgerMenu = (props) => {
       <Link to="/times" style={{ paddingLeft: '5px' }}>
         Asistencia
       </Link>
+      <Link to="/resources" style={{ paddingLeft: '5px' }}>
+        Recursos
+      </Link>
+      <Link to="/comments" style={{ paddingLeft: '5px' }}>
+        Comentarios
+      </Link>
       <Link to="/log-in" style={{ paddingLeft: '5px' }}>
         Cerrar sesión
       </Link>
+
     </Menu>
   );
 };

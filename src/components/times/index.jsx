@@ -33,14 +33,17 @@ const Times = () => {
       ...rows,
       { name: text, date: format(new Date(value), 'dd/MM/yyyy') },
     ])
+    setText(null);
+    setValue(null);
+    setOpen(false);
   }
   return (
     <div id="Dash">
       <HamburgerMenu pageWrapId={"page-wrap"} outerContainerId={"Dash"} />
       <div id="page-wrap">
-        <div class="p-12 flex flex-row justify-end">
+        <div className="p-12 flex flex-row justify-end">
           <Button
-            color="secondary"
+            style={{ backgroundColor: '#F99D07', fontWeight: 'bold'}}
             variant="contained"
             startIcon={<Add />}
             onClick={() => setOpen(!open)}
@@ -58,7 +61,7 @@ const Times = () => {
         title="Añadir una asistencia"
         handleClose={() => setOpen(false)}
         scroll="paper">
-        <div className="w-full space-y-4">
+        <div className="w-full space-y-4 ">
           <LocalizationProvider dateAdapter={AdapterDateFns}>
             <div className="p-5 flex flex-col space-y-5">
               <TextField

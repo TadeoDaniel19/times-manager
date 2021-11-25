@@ -24,11 +24,11 @@ export default function BasicTable(props) {
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
-        <TableHead>
+        <TableHead style={{ backgroundColor: '#35D461' }}>
           <TableRow>
             {
               columns?.map((item) => (
-                <TableCell key={item}>{item}</TableCell>
+                <TableCell style={{ fontWeight: 'bold'}} key={item}>{item}</TableCell>
               ))
             }
           </TableRow>
@@ -39,14 +39,14 @@ export default function BasicTable(props) {
               key={`item-${row.name}-${index + 1}`}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
-              <TableCell component="th" scope="row">
+              <TableCell style={{ backgroundColor: '#F99D07', width: '50px'}} component="th" scope="row">
                 <Avatar sx={{ bgcolor: randomColor() }}>{getInitials(row.name)}</Avatar>
               </TableCell>
-              <TableCell component="th" scope="row">
+              <TableCell style={{ backgroundColor: '#F9E104', fontWeight: 'bold', width: '250px'}} component="th" scope="row">
                 {row.name}
               </TableCell>
-              <TableCell component="th" scope="row">{row.date}</TableCell>
-              <TableCell component="th" scope="row">{<Check style={{ fill: 'green' }}/>}</TableCell>
+              <TableCell  style={{ backgroundColor: '#882FF6', color: 'white', fontWeight: 'bold', width: '50px'}} component="th" scope="row">{row.date}</TableCell>
+              <TableCell style={{ backgroundColor: '#37B6F6', color: 'white', fontWeight: 'bold',  width: '50px'}}  component="th" scope="row">{<Check style={{ fill: 'green' }}/>}</TableCell>
             </TableRow>
           ))}
         </TableBody>

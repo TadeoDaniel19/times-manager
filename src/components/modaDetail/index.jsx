@@ -26,11 +26,12 @@ const ModalDetail = (props) => {
         scroll={scroll}
         disableEscapeKeyDown
         aria-labelledby="form-dialog-title">
-        <DialogTitle id="form-dialog-title" style={{ color: 'black', fontSize: '20px' }}>
+        <DialogTitle id="form-dialog-title" style={{ backgroundColor: '#37B6F6', color: 'black', fontSize: '20px' }}>
           <center>
             {title}
           </center>
           <IconButton
+          style={{ color: 'black', fontSize: '20px' }}
             aria-label="close"
             className={classes.closeButton}
             onClick={handleClose}>

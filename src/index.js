@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import TimeAgo from 'javascript-time-ago'
+import es from 'javascript-time-ago/locale/es-MX.json'
+TimeAgo.addDefaultLocale(es)
+TimeAgo.addLocale(es)
 
 ReactDOM.render(
   <React.StrictMode>
