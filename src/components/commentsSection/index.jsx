@@ -7,9 +7,11 @@ import ModalDetail from '../modaDetail';
 import "./styles.css";
 import { Add } from '@mui/icons-material';
 import ImgAvatar from "../../assets/vero.jpeg"
+import userPng from "../../assets/user.png"
 import Comments from '../comments';
 
 const CommentsPage = () => {
+  const user =  localStorage.getItem('user');
   const [open, setOpen] = useState(false);
   const [text, setText] = React.useState('');
   const [content, setContent] = useState([
@@ -42,7 +44,7 @@ const CommentsPage = () => {
   const handleSubmit = () => {
     setContent([
       ...content,
-      { content: text, time: new Date(), avatar: ImgAvatar, name: "Verónica Pavana" },
+      { content: text, time: new Date(), avatar: user === 'vero123' ? ImgAvatar : userPng , name: user === 'vero123' ? 'Verónica Pavana' : user },
     ])
     setText('');
     setOpen(false);

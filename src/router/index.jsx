@@ -3,6 +3,7 @@ import CommentsPage from "../components/commentsSection";
 import Dashboard from "../components/dashboard";
 import LoginComponent from "../components/login";
 import ResourcesPage from "../components/resourcesSection";
+import Scores from "../components/scores";
 import SignIn from "../components/signUp";
 import Times from "../components/times";
 
@@ -18,6 +19,7 @@ const RootRouter = ()  => {
           <Route exact path="/times" element={<Times />}/>
           <Route exact path="/comments" element={<CommentsPage />} />
           <Route exact path="/resources" element={<ResourcesPage />} />
+          <Route exact path="/scores" element={<Scores />} />
         </Routes>
       </Router>
     </div>

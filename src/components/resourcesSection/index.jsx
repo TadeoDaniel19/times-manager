@@ -8,6 +8,7 @@ import AlignItemsList from '../resources';
 
 const ResourcesPage = () => {
   const [open, setOpen] = useState(false);
+  const user = localStorage.getItem('user');
   const [text, setText] = React.useState('');
   const [linkText, setLinkText] = React.useState('');
   const [content, setContent] = useState([
@@ -31,14 +32,18 @@ const ResourcesPage = () => {
       <HamburgerMenu pageWrapId={"page-wrap"} outerContainerId={"Dash"} />
       <div id="page-wrap">
         <div className="p-12 flex flex-row justify-end">
-          <Button
-            style={{ backgroundColor: '#F99D07', fontWeight: 'bold' }}
-            variant="contained"
-            startIcon={<Add />}
-            onClick={() => setOpen(!open)}
-          >
-            Añadir Recurso
-          </Button>
+        {
+            user === 'Veronica Pavana' && (
+              <Button
+                style={{ backgroundColor: '#F99D07', fontWeight: 'bold' }}
+                variant="contained"
+                startIcon={<Add />}
+                onClick={() => setOpen(!open)}
+              >
+                Añadir Recurso
+              </Button>
+            )
+          }
         </div>
         <div className="w-full p-12  flex justify-center">
           <AlignItemsList content={content} />
